@@ -16,5 +16,9 @@ describe 'the person view', type: :feature do
       expect(page).to have_content(phone.number)
     end
   end
+
+  it 'has a link to add a new phone number' do
+    expect(page).to have_link('Add phone number', href: new_phone_number_path)
+  end
 end
 
